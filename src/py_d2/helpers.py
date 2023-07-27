@@ -39,6 +39,7 @@ def add_weights_for_max_flow(
     x += "    shape: arrow\n"
     x += "  }\n"
     x += "}\n"
-
+    return x
+    
 def flatten(items: List[List[str]]) -> List[str]:
     return [item for sublist in items for item in sublist]
