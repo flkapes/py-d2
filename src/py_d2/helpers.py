@@ -28,5 +28,17 @@ def add_label_and_properties(
     return [first_line]
 
 
+def add_weights_for_max_flow(
+    name1: str, name2: str, label: List[int]
+):
+    x += name1 + "<->" + name2 + ": {\n"
+    x += "  source-arrowhead: "+{label[0]}" {\n"
+    x += "    shape: arrow\n"
+    x += "  }"
+    x += "  target-arrowhead: "+{label[1]}" {\n"
+    x += "    shape: arrow\n"
+    x += "  }\n"
+    x += "}\n"
+
 def flatten(items: List[List[str]]) -> List[str]:
     return [item for sublist in items for item in sublist]
